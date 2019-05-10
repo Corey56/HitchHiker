@@ -6,11 +6,11 @@
   font-family: "Allerta Stencil", Sans-serif;
 }
 </style>
+<body class="w3-container w3-pale-blue">
 <div class="w3-container w3-light-blue w3-center w3-allerta w3-padding-64">
   <h1 class="w3-jumbo w3-allerta">Hitch</h1>
   <p>This is a cadet Rideshare App</p>
 </div>
-<body>
-  <a href="{% url 'hitch:vehicle'  %}">Enter a New Ride</a>
-  <a href="/hitch/{{ cadet }}/oldDrives">See Your Previous Rides</a>
+  <a class="w3-border-white w3-border w3-col s6 w3-khaki w3-center w3-padding-64" href="{% url 'hitch:vehicle'  %}"><i class="glyphicon glyphicon-person">Enter a New Ride</i></a>
+  <a class="w3-border-white w3-border w3-col s6 w3-khaki w3-center w3-padding-64" href="/hitch/{{ cadet }}/oldDrives"><i class="glyphicon glyphicon-car">See Your Previous Rides</i></a>
 </body>

@@ -6,16 +6,17 @@
   font-family: "Allerta Stencil", Sans-serif;
 }
 </style>
+<body class="w3-container w3-pale-blue">
 <div class="w3-container w3-light-blue w3-center w3-allerta w3-padding-64">
   <h1 class="w3-jumbo w3-allerta">Hitch</h1>
   <p>This is a cadet Rideshare App</p>
 </div>
-<body>
-  <ul>
+  <ul class="w3-ul w3-border w3-khaki">
+  <li><h2>Rides</h2></li>
   {% for ride in ride_list %}
       {% csrf_token %}
-      <form action="" method="post">
-        <li> {{ride.destination}} {{ride.passengers}} {{ride.departureTime}} {{ride.willingToStopAt}}</li>
+      <form action="rides" method="post">
+        <li class="w3-bottombar w3-topbar w3-rightbar w3-leftbar w3-border-lightblue"> {{ride.destination}} {{ride.passengers}} {{ride.departureTime}}</li>
       <input type="submit" value="add me to this ride" />
   {% endfor %}
 </body>

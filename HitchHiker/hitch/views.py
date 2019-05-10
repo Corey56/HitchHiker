@@ -26,7 +26,7 @@ def rideMode(request, cadet):
     context = {'cadet':cadet}
     return render(request, 'hitch/rideMode.html', context)
 
-def rides(request):
+def rides(request, cadet):
     if request.method == 'POST':
         form = addRide(request.POST)
         if form.is_valid():
@@ -39,9 +39,9 @@ def rides(request):
     return render(request, 'hitch/rides.html', context)
 
 def oldRides(request, cadet):
-    ride_list = Ride.objects.get(cadet in Ride.passengers)
+    ride_list = Vehicle.objects.filter(driver=cadet)
     context = {'ride_list':ride_list, 'cadet': cadet}
-    return render(request, 'hitch/rides.html', context)
+    return render(request, 'hitch/oldRides.html', context)
 
 def driverMode(request, cadet):
     context = {'cadet':cadet}
