@@ -17,7 +17,7 @@ class Vehicle(models.Model):
     carModel = models.CharField(max_length=30)
     carColor = models.CharField(max_length=20)
     def __str__(self):
-        return '%s %s %s %s' % (self.carMake, self.carModel, self.carColor)
+        return '%s %s %s' % (self.carMake, self.carModel, self.carColor)
 
 class Destination(models.Model):
     destination = models.CharField(max_length=50)

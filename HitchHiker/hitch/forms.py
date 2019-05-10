@@ -17,3 +17,8 @@ class RideForm(forms.ModelForm):
     class Meta:
         model = Ride
         fields = '__all__'
+
+class addRide(forms.ModelForm):
+    class Meta:
+        model = Ride
+        fields = ('passengers',)

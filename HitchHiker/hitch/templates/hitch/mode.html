@@ -1,10 +1,17 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<h1>Hitch</h1>
-<h1> {{ cadet }} </h1>
-<a href="{% url 'hitch:rideMode' %}">Rider</a>
-<a href="{% url 'hitch:driverMode' %}">Driver</a>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+.w3-allerta {
+  font-family: "Allerta Stencil", Sans-serif;
+}
+</style>
+<div class="w3-container w3-light-blue w3-center w3-allerta w3-padding-64">
+  <h1 class="w3-jumbo w3-allerta">Hitch</h1>
+  <p>This is a cadet Rideshare App</p>
+</div>
+<a href="/hitch/{{ cadet }}/rideMode"">Rider</a>
+<a class="fa fa-car" href="/hitch/{{ cadet }}/driverMode">Driver</a>
+<i class="glyphicon glyphicon-trash"></i>
 <body>
 </body>
